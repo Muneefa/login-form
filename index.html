@@ -6,31 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div id="navbar">
     <ul class="navbar-right">
-      <li><a href="#home">Home</a></li>
+      <!-- <li><a href="#home">Home</a></li> -->
       <li><a href="#blog">blog</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
-      <button onclick="document.getElementById('container').style.display='block'" style="width:auto;">Login</button>
-
+      <button onclick="document.getElementById('container').style.display='block'"" style="width:auto;background-color:green">Login</button>
+<!-- <button onclick="showLoginModal()" style="width:auto;">Login</button> -->
     </ul>
   </div>
 
   <!-- text moving -->
-  <section id="text1">
+  <marquee id="text1" behavior="" scrollamount="30" direction="">
+    <h1>Mega sale !HURRY UP</h1>
+  </marquee>
+  <!-- <section id="text1">
     <h1>Mega sale !HURRY UP</h1>
 
-  </section>
+  </section> -->
 
 
   <!-- text moving end -->
   <div id="container" class="modal">
-    <form class="f1" method="post">
+    <form class="f1" method="post"   name="myform" onsubmit="return validateform()">
       <div class="imgcontainer">
         <span onclick="document.getElementById('container').style.display='none'" class="close"
           title="Close Modal">&times;</span>
@@ -39,10 +43,10 @@
 
       <div class="container">
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="uname" >
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="psw" >
 
         <button type="submit">Login</button>
         <label>
@@ -58,42 +62,16 @@
     </form>
   </div>
 
-  <!-- <div class="slideshow-container">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 3</div>
-      <img src="image/th.jpg" style="width:100% ">
-      <div class="text">Caption Text</div>
-    </div>
-
-    <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="image/th (3).jpg" style="width:100% ">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="image/th (2).jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-
-
-<div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-  </div>
-</div>
-<br> -->
+  
   <section id="hero">
     <h1 style="margin:15px">Trade in all</h1>
     <h2>shop on </h2>
     <h1>OFFer Valid up to date</h1>
-    <button type="submit" style="width:30%">shop now</button>
+    <button type="submit"  id="show-image-button" style="width:30%;background-color:green;padding:0%;height:6%">shop now</button>
+    <span onclick="document.getElementById('my-image').style.display='none'" class="close"
+    title="Close Modal">&times;</span>
+    <img id="my-image" src="image/mega.gif" style="display: none;" >
+   
   </section>
 
 
@@ -123,20 +101,24 @@
     </div>
   </section>
   <!-- section ends here -->
-  <section id="product1" class="section-p1">
-    <p>Featured Products</p>
+
+  <div id="head">
+    <h1>Featured Products</h1>
     <h4>Summer collection</h4>
-    <div class="pro-container">
+ 
+  <section id="product1" class="section-p1">
+    
+    <div class="pro-container" id="blog">
       <div class="pro">
         <img src="image/dress1.jpg" alt="">
         <div class="des">
           <span>Adidas</span>
           <h5>Cartoon T shirts</h5>
           <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
           </div>
           <h4>$78</h4>
         </div>
@@ -147,15 +129,123 @@
 
     <div class="pro-container">
       <div class="pro">
-        <img src="image/dress1.jpg" alt="">
+        <img src="image/summer4.jpg" alt="">
         <div class="des">
           <span>Adidas</span>
           <h5>Cartoon T shirts</h5>
           <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"></a>
+      </div>
+    </div>
+
+    <div class="pro-container">
+      <div class="pro">
+        <img src="image/summer4.jpg" alt="">
+        <div class="des">
+          <span>Adidas</span>
+          <h5>Cartoon T shirts</h5>
+          <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"></a>
+      </div>
+    </div>
+    <div class="pro-container">
+      <div class="pro">
+        <img src="image/summer4.jpg" alt="">
+        <div class="des">
+          <span>Adidas</span>
+          <h5>Cartoon T shirts</h5>
+          <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"></a>
+      </div>
+    </div>
+    <div class="pro-container">
+      <div class="pro">
+        <img src="image/summer4.jpg" alt="">
+        <div class="des">
+          <span>Adidas</span>
+          <h5>Cartoon T shirts</h5>
+          <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"></a>
+      </div>
+    </div>
+
+
+    <div class="pro-container">
+      <div class="pro">
+        <img src="image/summer3.jpg" alt="">
+        <div class="des">
+          <span>Adidas</span>
+          <h5>Cartoon T shirts</h5>
+          <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"></a>
+      </div>
+    </div>
+
+    <div class="pro-container">
+      <div class="pro">
+        <img src="image/summer2.jpg" alt="">
+        <div class="des">
+          <span>Adidas</span>
+          <h5>Cartoon T shirts</h5>
+          <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"></a>
+      </div>
+    </div>
+
+
+    <div class="pro-container">
+      <div class="pro">
+        <img src="image/summer1.jpg" alt="">
+        <div class="des">
+          <span>Adidas</span>
+          <h5>Cartoon T shirts</h5>
+          <div class="star">
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
           </div>
           <h4>$78</h4>
         </div>
@@ -163,8 +253,227 @@
       </div>
     </div>
   </section>
+</div>
 
+<section id="banner" class="section-m1">
+<h4>Repair Services</h4>
+<h2>Up to <span>70% off </span>All t-shirts & Accessories</h2>
+<button class="normal">Explore More</button>
+</section> 
+
+
+
+<div id="head">
+  <h1>New ARRIVALS</h1>
+  <h4>Summer collection</h4>
+
+<section id="product1" class="section-p1">
+  
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/dress1.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+
+
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/summer4.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/summer4.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/summer4.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/summer4.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+
+
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/summer3.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/summer2.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+
+
+  <div class="pro-container">
+    <div class="pro">
+      <img src="image/summer1.jpg" alt="">
+      <div class="des">
+        <span>Adidas</span>
+        <h5>Cartoon T shirts</h5>
+        <div class="star">
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        </div>
+        <h4>$78</h4>
+      </div>
+      <a href="#"></a>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<section id="sm-banner" class="section-p1">
+<div class="banner-box">
+  <h4>crazy deals</h4>
+  <h2>Buy one get one free</h2>
+  <span>The best classic dress is on sale at cara</span>
+  <button class="white"> Learn more</button>
+</div>
+
+<div class="banner-box banner-box2">
+  <h4>crazy deals</h4>
+  <h2>Buy one get one free</h2>
+  <span>The best classic dress is on sale at cara</span>
+  <button class="white">Learn more</button>
+</div>
+</section>
+
+
+<section id="banner3">
+  <div class="banner-box">
+    <h4>Seasonal wear</h4>
+    <h2>Buy one get one free</h2>
+  </div>
+  <div class="banner-box  banner-box2">
+    <h4>Seasonal wear</h4>
+    <h2>Buy one get one free</h2>
+  </div>
+  <div class="banner-box banner-box3">
+    <h4>Seasonal wear</h4>
+    <h2>Buy one get one free</h2>
+  </div>
+  
+
+</section>
+
+
+
+<!-- contact page -->
+
+<section id="contact">
+  <div class="contactext">
+    <h4>Sign Up for more information</h4>
+    <p>Get Email Updates About Our Latest shop <span>special OFFer</span></p>
+  </div>
+  <div class="form">
+    <input type="text" placeholder="Your email address">
+    <button class="normal">Sign Up</button>
+  </div>
+</section>
   <script src="app.js"></script>
+  
+
+  
+
+ <!-- //footer -->
+ <footer>
+
+ </footer>
 
 
 </body>

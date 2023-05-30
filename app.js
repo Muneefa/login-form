@@ -7,37 +7,44 @@ window.onclick = function(event) {
     }
 }
 
-// slideshow
-let slideIndex = 1;
-    showSlides(slideIndex);
+// login form validation
+function validateform(){  
+  var name=document.myform.uname.value;  
+  var password=document.myform.psw.value;  
     
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) 
-      {slideIndex = 1}   
-       
-      if (n < 1) 
-      {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++)
-       {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
+  if (name==null || name==""){  
+    alert("Name can't be blank");  
+    return false;  
+  }else if(password.length<6){  
+    alert("Password must be at least 6 characters long.");  
+    return false;  
+    }  
+  }  
+
+  // shop now button with gif
+  const c = document.getElementById("show-image-button");
+      const a = document.getElementById("my-image"); 
+      c.addEventListener("click", () => { 
+         a.style.display = "block"; 
+      });
 
 
-    
+
+      // to close the image
+var r = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < r.length; i++) {
+  r[i].addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+}
+
+// var closeButton = document.getElementsByClassName("close")[0]; // Assuming there is only one close button
+// var gifContainer = document.getElementById("my-image").parentNode;
+
+// closeButton.addEventListener("click", function() {
+//   gifContainer.style.display = 'none';
+// });
+
+
