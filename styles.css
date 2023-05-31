@@ -9,7 +9,7 @@
   }
 body{
   /* width:100vw;  */
-}
+/* } */
 div{
   overflow: hidden;
 }
@@ -27,25 +27,41 @@ div{
   }
   .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    /* margin: 24px 0 12px 0; */
     position: relative;
+    width: fit-content;
   }
-
+.close{
+  float: right;
+  padding: 5px;
+  margin: 5px;
+  color: red;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: white;
+}
   #container{
     display:block;
   }
 
   .f1{
-    background-color: #fefefe;
-    margin: 5% auto 15% auto;
-    border: 1px solid #888;
-    width: 25%;
-    height: 15%;
+    background-color: #2b0808;
+    /* margin: 5% auto 15% auto; */
+    /* border: 1px solid #888; */
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+    /* height: 15%; */
+    
+    /* position: relative; */
+
+    ;
 }
 
 input[type=text], input[type=password] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 7px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -162,6 +178,7 @@ ul {
   /* image login form */
   .avatar{
     width:90%;
+    height: 60%;
   }
 
   /* hero */
@@ -176,6 +193,7 @@ ul {
     justify-content: center;
     padding: 0 80px;
     flex-direction: column;
+    position: relative;
   }
 
   #hero h4{
@@ -554,7 +572,7 @@ font-weight: 300;
       justify-content: space-between;
       flex-wrap: wrap;
        align-items: center;
-      /* background-image: url("image/dress2.jpg"); */ */
+      /* background-image: url("image/dress2.jpg"); */ 
       background-repeat: no-repeat;
       background-position:20% 30%;
       background-color:darkblue;
@@ -607,3 +625,34 @@ font-weight: 300;
       width:50%;
       border:1px solid black;
     }
+
+    .profile{
+      position: absolute;
+      top:46px;
+    }
+/* add to cart and view */ 
+    
+#add button{
+  background-color: #04AA6D;
+  padding: 10px;
+}
+
+
+/* @media(max-width:600px){
+  body{
+    min-width:300px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  /* Styles for screens with a maximum width of 768px */
+  /* Example: Adjust the size of the navigation bar */
+  #navbar {
+    display:block;
+  }
+
+  /* Example: Center the heading in the hero section */
+  #hero h1 {
+    text-align: center;
+  }
+}

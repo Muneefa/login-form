@@ -1,10 +1,21 @@
 var modal = document.getElementById('container');
 
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        modal.style.display = "none";  //closed
+        
     }
+    else
+    {
+      //open
+    }
+}
+function loginclick()
+{
+  document.getElementById('container').style.display="block";
+  document.getElementById('text1').style.margin = "5% 5% 5% 22%";
 }
 
 // login form validation
@@ -21,30 +32,22 @@ function validateform(){
     }  
   }  
 
-  // shop now button with gif
-  const c = document.getElementById("show-image-button");
-      const a = document.getElementById("my-image"); 
-      c.addEventListener("click", () => { 
-         a.style.display = "block"; 
-      });
+  
+//to close the image
+const s = document.getElementById("show-image-button");
+const z = document.getElementById("my-image");
+
+s.addEventListener("click", () => {
+  z.style.display = "block";
+});
 
 
-
-      // to close the image
 var r = document.getElementsByClassName("close");
-var i;
-
-for (i = 0; i < r.length; i++) {
+for (var i = 0; i < r.length; i++) {
   r[i].addEventListener("click", function() {
-    this.parentElement.style.display = 'none';
+    z.style.display = "none";
   });
 }
 
-// var closeButton = document.getElementsByClassName("close")[0]; // Assuming there is only one close button
-// var gifContainer = document.getElementById("my-image").parentNode;
-
-// closeButton.addEventListener("click", function() {
-//   gifContainer.style.display = 'none';
-// });
 
 
