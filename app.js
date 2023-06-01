@@ -51,3 +51,67 @@ for (var i = 0; i < r.length; i++) {
 
 
 
+// add to cart
+
+var a = 0;
+var cartItems = [];
+    function addToCart() {
+      a++;
+      cartItems.push("western top"); 
+      document.getElementById("cartadd").textContent = a;
+    }
+    // function addToCart() {
+    //   cartCount++;
+      // Replace "Item Name" with the actual item name
+  
+      // Update the cart count displayed on the page
+      // document.getElementById("cartCount").textContent = cartCount;
+    // }
+
+    function goToCart() {
+      window.location.href = "cart.html";
+    }
+    
+
+    // displaying cart
+    // var cart=[];
+    // function displaycart(a){
+    //   let j=0;
+    //   if(cart.length==0){
+    //     document.getElementById('cartitem').innerHTML=cartItems;
+    //   }
+    //   else{
+    //     document.getElementById("cartitem").innerHTML=cart.map(items)=>
+    //     {
+    //       var 
+    //     }
+    //   }
+    // }
+
+    // function viewCart() {
+    //   var cartItemsContainer = document.getElementById("cartItemsContainer");
+    
+    //   // Clear previous contents
+    //   cartItemsContainer.innerHTML = "";
+    
+    //   // Check if cart is empty
+    //   if (cartItems.length === 0) {
+    //     cartItemsContainer.textContent = "Your cart is empty.";
+    //     return;
+    //   }
+    
+    //   // Create a list to display the cart items
+    //   var itemList = document.createElement("ul");
+    
+    //   // Iterate over the cartItems array and create list items for each item
+    //   cartItems.forEach(function (item) {
+    //     var listItem = document.createElement("li");
+    //     listItem.textContent = item;
+    //     itemList.appendChild(listItem);
+    //   });
+    
+    //   // Append the list to the cartItemsContainer element
+    //   cartItemsContainer.appendChild(itemList);
+    // }
+    // alert(nj)
+    

@@ -155,17 +155,6 @@ ul {
     top: 0;
   }
   
-  /* The dots/bullets/indicators */
-  /* .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  } */
   
   .active, .dot:hover {
     background-color: #f7f3f3;
@@ -181,6 +170,10 @@ ul {
     height: 60%;
   }
 
+  html{
+    overflow-x: hidden;
+  }
+
   /* hero */
   #hero{
     background-image:url("image/GettyImages-912949110.jpg");
@@ -191,7 +184,7 @@ ul {
     display:flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 0 80px;
+    /* padding: 0 80px; */
     flex-direction: column;
     position: relative;
   }
@@ -513,7 +506,8 @@ font-weight: 300;
     }
 
     #sm-banner .banner-box2{
-      background-image: url("image/banner.jpg");
+      background-image: url("image/s2.jpg");
+      color:black;
     } 
 
 
@@ -645,7 +639,11 @@ font-weight: 300;
 } */
 
 @media screen and (max-width: 768px) {
-  /* Styles for screens with a maximum width of 768px */
+  body{
+min-width: 300px;
+overflow: auto;
+  }}
+  
   /* Example: Adjust the size of the navigation bar */
   #navbar {
     display:block;
@@ -655,4 +653,32 @@ font-weight: 300;
   #hero h1 {
     text-align: center;
   }
+
+
+
+
+/* add to cart icon */
+.bi-cart{
+  font-size: 3rem;
+  /* padding:50px; */
+  /* float:right; */
+  color:white;
+  margin-left:69%;
+}
+
+#cartadd{
+  top:-5px;
+  font-size: 16px;
+  /* right:0; */
+  border-radius: 3px;
+  background-color: red;
+  color:white;
+  position: absolute;
+}
+
+/* display cart */
+#cart{
+  background-color: #747b1068;
+  color:white;
+  padding: 20px;
 }
