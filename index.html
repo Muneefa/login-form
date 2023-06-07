@@ -18,18 +18,22 @@
       <!-- <li><a href="#home">Home</a></li> -->
       <li><a href="#blog">blog</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="about.html">About</a></li>
       <button onclick="loginclick()" style="
         width:auto;background-color:green">Login</button>
-        <i class="bi bi-cart"  > <span id="cartadd">0</span> </i>
+        <i class="bi bi-cart"   id="cartIcon">
+           <span id="cartCount">0</span>
+        </i>
+        <button  style="width:auto;background-color:rgb(42, 145, 8);float:right;margin-left:3%">Logout</button>
         
-        
-        <!-- <i class="bi bi-cart"  onclick="addclick()">  <span id="cartadd">0</span> </i> -->
+       
       
     </ul>
    
   </div>
-
+<!-- <div id="mobile">
+  <i id="bar" class="fas fa-outdent"></i>
+</div> -->
   <!-- text moving -->
   <marquee id="text1" behavior="" scrollamount="30" direction="">
     <h1>Mega sale !HURRY UP</h1>
@@ -48,7 +52,9 @@
       now</button>
     <span class="close" title="Close Modal">&times;</span>
     <img id="my-image" src="image/mega.gif" style="display: none;">
-
+    <!-- <div class="trolly"> -->
+      <!-- <img src="image/trolly-removebg-preview.png" width:10%;> -->
+    <!-- </div> -->
   </section>
 
   <div class="profile">
@@ -132,8 +138,8 @@
             <h4>$78</h4>
           </div>
           <div id="add">
-          <button type="submit" onclick="addToCart()">ADD TO CART</button>
-          <button type="submit" >view</button></div>
+          <button type="submit" onclick="addToCart()" >ADD TO CART1</button>
+          <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
         
@@ -156,7 +162,7 @@
           </div>
           <div id="add">
             <button type="submit" onclick="addToCart()">ADD TO CART</button>
-            <button type="submit" >view</button></div>
+            <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -177,7 +183,7 @@
           </div>
           <div id="add">
             <button type="submit" onclick="addToCart()">ADD TO CART</button>
-            <button type="submit" >view</button></div>
+            <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -197,7 +203,7 @@
           </div>
           <div id="add">
             <button type="submit" onclick="addToCart()">ADD TO CART</button>
-            <button type="submit" >view</button></div>
+            <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -217,7 +223,7 @@
           </div>
           <div id="add">
             <button type="submit" onclick="addToCart()">ADD TO CART</button>
-            <button type="submit" >view</button></div>
+            <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -239,7 +245,7 @@
           </div>
           <div id="add">
             <button type="submit" onclick="addToCart()">ADD TO CART</button>
-            <button type="submit" >view</button></div>
+            <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -260,7 +266,7 @@
           </div>
           <div id="add">
             <button type="submit" onclick="addToCart()">ADD TO CART</button>
-            <button type="submit" >view</button></div>
+            <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -282,7 +288,7 @@
           </div>
           <div id="add">
             <button type="submit" onclick="addToCart()">ADD TO CART</button>
-            <button type="submit" >view</button></div>
+            <button type="submit" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -302,8 +308,9 @@
     <h4>Summer collection</h4>
 
     <section id="product1" class="section-p1">
+      <div id="item-container" class="pro-container"></div>
 
-      <div class="pro-container">
+      <!-- <div class="pro-container">
         <div class="pro">
           <img src="image/dress1.jpg" alt="">
           <div class="des">
@@ -319,7 +326,7 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button">view</button></div>
+            <button type="button" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -341,7 +348,7 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button" >view</button></div>
+            <button type="button" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -362,7 +369,7 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button" >view</button></div>
+            <button type="button"id="viewButton"  >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -382,7 +389,7 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button" >view</button></div>
+            <button type="button" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -402,7 +409,7 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button">view</button></div>
+            <button type="button" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -424,7 +431,7 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button" >view</button></div>
+            <button type="button" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -445,7 +452,7 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button" >view</button></div>
+            <button type="button" id="viewButton" >view</button></div>
           <a href="#"></a>
         </div>
       </div>
@@ -467,10 +474,11 @@
           </div>
           <div id="add">
             <button type="button" onclick="addToCart()">ADD TO CART</button>
-            <button type="button">view</button></div>
+            <button type="button" id="viewButton">view</button></div>
           <a href="#"></a>
         </div>
-      </div>
+      </div> -->
+      
     </section>
   </div>
 
@@ -512,7 +520,7 @@
 
 
   <!-- contact page -->
-
+  <footer>
   <section id="contact">
     <div class="contactext">
       <h4>Sign Up for more information</h4>
@@ -523,17 +531,126 @@
       <button class="normal">Sign Up</button>
     </div>
   </section>
-  <script src="app.js"></script>
-
-
+  <div id="social">
+    <i class="bi bi-instagram">
+    <a href="#">follow us on instagram</a></i>
+  
+ 
+    <i class="bi bi-facebook">
+    <a href="#">follow us on facebook</a></i>
+  
+  
+     <i class="bi bi-geo-alt">
+    <a href="#">live location</a></i>
+  </div>
   
 
+ 
+  <script src="app.js"></script>
+
   <!-- //footer -->
-  <footer>
+ 
 
   </footer>
+<!-- <section id="last">
+<div class="night">
+<div class="surface">
+  <div class="car">
+    <img src="image/car2.png" width:10%;>
+  </div>
+</div>
+</div>
+</section> -->
+<script>
+  // Array of items
+const items = [
+{
+  id: 1,
+  image: 'image/summer1.jpg',
+  brand: 'Adidas',
+  title: 'Cartoon T shirts',
+  rating: 4,
+  price: 78.00,
+},
+{
+  id: 2,
+  image: 'image/summer2.jpg',
+  brand: 'Nike',
+  title: 'Graphic Print T-shirt',
+  rating: 5,
+  price: 59.99,
+},
+{
+  id: 3,
+  image: 'image/dd5.jpg',
+  brand: 'Nike',
+  title: ' Print1 T-shirt',
+  rating: 3,
+  price: 99.99,
+},
+{
+  id: 4,
+  image: 'image/dd1.jpg',
+  brand: 'Nike',
+  title: ' Print2 T-shirt',
+  rating: 3,
+  price: 99.99,
+},
+{
+  id: 5,
+  image: 'image/summer4.jpg',
+  brand: 'kurthi',
+  title: ' Print3 T-shirt',
+  rating: 5,
+  price: 120.99,
+},
+// Add more items here...
+];
+
+// Create HTML elements for each item
+const itemContainer = document.getElementById('item-container');
+
+items.forEach(item => {
+const itemElement = document.createElement('div');
+itemElement.classList.add('pro');
+
+let starHtml = '';
+for (let i = 0; i < item.rating; i++) {
+  starHtml += '<span class="fa fa-star"></span>';
+}
+itemElement.innerHTML = `
+  <img src="${item.image}" alt="">
+  <div class="des">
+    <span>${item.brand}</span>
+    <h5>${item.title}</h5>
+    <div class="star">
+      ${starHtml}
+    </div>
+    <h4>$${item.price.toFixed(2)}</h4>
+  </div>
+  <div id="add">
+    <button type="button" onclick="addToCart()">ADD TO CART</button>
+    <button type="button" id="viewButton">view</button>
+  </div>
+  <a href="#"></a>
+`;
+
+const addToCartButton = itemElement.querySelector('button');
+addToCartButton.addEventListener('click', () => {
+  console.log('Item added to cart:', item);
+});
+
+const viewButton = itemElement.querySelector('#viewButton');
+viewButton.addEventListener('click', () => {
+  console.log('View item:', item);
+});
+
+itemContainer.appendChild(itemElement);
+});
 
 
+
+</script>
 </body>
 
 </html>

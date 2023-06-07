@@ -49,69 +49,50 @@ for (var i = 0; i < r.length; i++) {
   });
 }
 
-
+// end
 
 // add to cart
+function addToCart() {
+  debugger;
+  var cartCountElement = document.getElementById("cartCount");
+  var currentCount = parseInt(cartCountElement.innerHTML);
+  cartCountElement.innerHTML = currentCount + 1;
+}
+// when clicked on cart icon it will go to cart,htnml
+// Get the cart icon element
+var cartIcon = document.getElementById("cartIcon");
 
-var a = 0;
-var cartItems = [];
-    function addToCart() {
-      a++;
-      cartItems.push("western top"); 
-      document.getElementById("cartadd").textContent = a;
-    }
-    // function addToCart() {
-    //   cartCount++;
-      // Replace "Item Name" with the actual item name
-  
-      // Update the cart count displayed on the page
-      // document.getElementById("cartCount").textContent = cartCount;
-    // }
+// Attach a click event listener to the cart icon
+cartIcon.addEventListener("click", function() {
+    // Redirect to the cart.html page
+    window.location.href = "cart.html";
+});
 
-    function goToCart() {
-      window.location.href = "cart.html";
-    }
-    
 
-    // displaying cart
-    // var cart=[];
-    // function displaycart(a){
-    //   let j=0;
-    //   if(cart.length==0){
-    //     document.getElementById('cartitem').innerHTML=cartItems;
-    //   }
-    //   else{
-    //     document.getElementById("cartitem").innerHTML=cart.map(items)=>
-    //     {
-    //       var 
-    //     }
-    //   }
-    // }
 
-    // function viewCart() {
-    //   var cartItemsContainer = document.getElementById("cartItemsContainer");
-    
-    //   // Clear previous contents
-    //   cartItemsContainer.innerHTML = "";
-    
-    //   // Check if cart is empty
-    //   if (cartItems.length === 0) {
-    //     cartItemsContainer.textContent = "Your cart is empty.";
-    //     return;
-    //   }
-    
-    //   // Create a list to display the cart items
-    //   var itemList = document.createElement("ul");
-    
-    //   // Iterate over the cartItems array and create list items for each item
-    //   cartItems.forEach(function (item) {
-    //     var listItem = document.createElement("li");
-    //     listItem.textContent = item;
-    //     itemList.appendChild(listItem);
-    //   });
-    
-    //   // Append the list to the cartItemsContainer element
-    //   cartItemsContainer.appendChild(itemList);
-    // }
-    // alert(nj)
-    
+
+
+
+
+
+// Get all the view buttons
+var viewButtons = document.querySelectorAll("#viewButton");
+
+// Add event listeners to each view button
+viewButtons.forEach(function(viewButton) {
+  viewButton.addEventListener("click", function() {
+    // Get the parent container of the clicked button
+    var productContainer = viewButton.closest(".pro");
+
+    // Get the product details within the container
+    var productImage = productContainer.querySelector("img").getAttribute("src");
+    var productName = productContainer.querySelector(".des h5").textContent;
+    var productPrice = productContainer.querySelector(".des h4").textContent;
+
+    // Encode the product name for URL parameter
+    var encodedProductName = encodeURIComponent(productName);
+
+    // Redirect to the product details page with URL parameters
+    window.location.href = "product-details.html?name=" + encodedProductName + "&price=" + productPrice + "&image=" + productImage;
+  });
+});
