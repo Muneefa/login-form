@@ -16,7 +16,10 @@ function loginclick()
 {
   document.getElementById('container').style.display="block";
   document.getElementById('text1').style.margin = "5% 5% 5% 22%";
+  
+ 
 }
+
 
 // login form validation
 function validateform(){  
@@ -30,6 +33,7 @@ function validateform(){
     alert("Password must be at least 6 characters long.");  
     return false;  
     }  
+    window.location.href = "shop.html";
   }  
 
   
@@ -53,7 +57,7 @@ for (var i = 0; i < r.length; i++) {
 
 // add to cart
 function addToCart() {
-  debugger;
+  
   var cartCountElement = document.getElementById("cartCount");
   var currentCount = parseInt(cartCountElement.innerHTML);
   cartCountElement.innerHTML = currentCount + 1;
@@ -71,28 +75,3 @@ cartIcon.addEventListener("click", function() {
 
 
 
-
-
-
-
-// Get all the view buttons
-var viewButtons = document.querySelectorAll("#viewButton");
-
-// Add event listeners to each view button
-viewButtons.forEach(function(viewButton) {
-  viewButton.addEventListener("click", function() {
-    // Get the parent container of the clicked button
-    var productContainer = viewButton.closest(".pro");
-
-    // Get the product details within the container
-    var productImage = productContainer.querySelector("img").getAttribute("src");
-    var productName = productContainer.querySelector(".des h5").textContent;
-    var productPrice = productContainer.querySelector(".des h4").textContent;
-
-    // Encode the product name for URL parameter
-    var encodedProductName = encodeURIComponent(productName);
-
-    // Redirect to the product details page with URL parameters
-    window.location.href = "product-details.html?name=" + encodedProductName + "&price=" + productPrice + "&image=" + productImage;
-  });
-});

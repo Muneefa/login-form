@@ -19,8 +19,10 @@
       <li><a href="#blog">blog</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="about.html">About</a></li>
+      <!-- <li><a href="shop.html">shop</a></li> -->
       <button onclick="loginclick()" style="
         width:auto;background-color:green">Login</button>
+
         <i class="bi bi-cart"   id="cartIcon">
            <span id="cartCount">0</span>
         </i>
@@ -31,10 +33,7 @@
     </ul>
    
   </div>
-<!-- <div id="mobile">
-  <i id="bar" class="fas fa-outdent"></i>
-</div> -->
-  <!-- text moving -->
+
   <marquee id="text1" behavior="" scrollamount="30" direction="">
     <h1>Mega sale !HURRY UP</h1>
   </marquee>
@@ -61,30 +60,18 @@
     <div id="container" class="modal">
       <form class="f1" method="post" name="myform" onsubmit="return validateform()">
         <div class="imgcontainer">
-          <img src="image/th (1).jpg" alt="Avatar" class="avatar">
+            <img src="image/th (1).jpg" alt="Avatar" class="avatar">
         </div>
 
         <div class="container" style="padding: 10px;">
-          <span onclick="document.getElementById('container').style.display='none'; document.getElementById('text1').style.margin = '5%';" class="close"
-            title="Close Modal">&times;</span>
-          <!-- <label for="uname"><b>Username</b></label> -->
-          <input type="text" placeholder="Enter Username" name="uname">
-
-          <!-- <label for="psw"><b>Password</b></label> -->
-          <input type="password" placeholder="Enter Password" name="psw">
-
-          <button type="submit">Login</button><br>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-          <div class="container" style="background-color:#eee6e6">
-           
-            <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
+            <span onclick="document.getElementById('container').style.display='none'; document.getElementById('text1').style.margin = '5%';" class="close"
+                title="Close Modal">&times;</span>
+            <input type="text" placeholder="Enter Username" name="uname">
+            <input type="password" placeholder="Enter Password" name="psw">
+            <button type="submit">Login</button><br>
         </div>
-
-        
-      </form>
+    </form>
+   
     </div>
   </div>
 
@@ -120,7 +107,7 @@
     <h1>Featured Products</h1>
     <h4>Summer collection</h4>
 
-    <section id="product1" class="section-p1">
+    <!-- <section id="product1" class="section-p1">
 
       <div class="pro-container" id="blog">
         <div class="pro">
@@ -292,7 +279,7 @@
           <a href="#"></a>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 
   <section id="banner" class="section-m1">
@@ -303,12 +290,12 @@
 
 
 
-  <div id="head">
+  <!-- <div id="head">
     <h1>New ARRIVALS</h1>
     <h4>Summer collection</h4>
 
     <section id="product1" class="section-p1">
-      <div id="item-container" class="pro-container"></div>
+      <div id="item-container" class="pro-container"></div> -->
 
       <!-- <div class="pro-container">
         <div class="pro">
@@ -563,7 +550,7 @@
 </section> -->
 <script>
   // Array of items
-const items = [
+/* const items = [
 {
   id: 1,
   image: 'image/summer1.jpg',
@@ -646,11 +633,18 @@ viewButton.addEventListener('click', () => {
 });
 
 itemContainer.appendChild(itemElement);
-});
+}); */
 
+/ when i submit login form it should render to shop.html page /
+  document.forms.myform.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
 
-
+      
+      window.location.href = "shop.html";
+  });
 </script>
+
+
 </body>
 
 </html>
