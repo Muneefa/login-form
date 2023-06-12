@@ -103,13 +103,7 @@
     <section id="product1" class="section-p1">
       <div id="item-container" class="pro-container"></div>
 
-<!-- <div class="card">
-        <img src="image/dress.jpg" alt="Denim Jeans" style="width:100%">
-        <h1>Tailored Jeans</h1>
-        <p class="price">$19.99</p>
-        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-        <p><button>Add to Cart</button></p>
-</div> -->
+
 
 
 
@@ -150,13 +144,7 @@
     </footer>
 </body>
 <script>
-    function buttonclick() {
-        // Perform any login logic here
-
-        // Redirect to shop.html
-        window.location.href = "shop.html";
-    }
-
+   
 
 //array of items for shopping cart 
    // Array of items
@@ -260,6 +248,7 @@ const items = [
 // Add more items here...
 ];
 
+
 // Create HTML elements for each item
 const itemContainer = document.getElementById('item-container');
 
@@ -282,7 +271,9 @@ itemElement.innerHTML = `
     <h4>$${item.price.toFixed(2)}</h4>
   </div>
   <div id="add">
-    <button type="button" id="addToCart" onclick="addToCart()">ADD TO CART</button>
+    <button type="button" id="addToCart" onclick="addToCart(this)">ADD TO CART</button>
+
+  
     <button type="button" id="viewButton">view</button>
   </div>
   <a href="#"></a>
@@ -301,27 +292,88 @@ viewButton.addEventListener('click', () => {
 itemContainer.appendChild(itemElement);
 });
 
-
+//-------------------------------------------start----------------------------------------------------------------
 /add to cart/
 
-function addToCart() {
-  
+
+  /*function addToCart() {
+    // Increment the cart count
     var cartCountElement = document.getElementById("cartCount");
     var currentCount = parseInt(cartCountElement.innerHTML);
     cartCountElement.innerHTML = currentCount + 1;
+  
+    // Get the product details
+    var productContainer = this.closest(".pro");
+    var productName = productContainer.querySelector(".des h5").textContent;
+    var productPrice = productContainer.querySelector(".des h4").textContent;
+    var productImage = productContainer.querySelector("img").getAttribute("src");
+  
+    // Create an object representing the cart item
+    var cartItem = {
+      name: productName,
+      price: productPrice,
+      image: productImage
+    };
+  
+    // Get the existing cart items from local storage or initialize an empty array
+    var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  
+    // Add the new cart item to the array
+    cartItems.push(cartItem);
+  
+    // Store the updated cart items in local storage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }
-  // when clicked on cart icon it will go to cart,htnml
   // Get the cart icon element
-  var cartIcon = document.getElementById("cartIcon");
-  
-  // Attach a click event listener to the cart icon
-  cartIcon.addEventListener("click", function() {
-      // Redirect to the cart.html page
-      window.location.href = "cart.html";
-  });
-  
- 
+var cartIcon = document.getElementById("cartIcon");
 
+// Attach a click event listener to the cart icon
+cartIcon.addEventListener("click", function() {
+  // Redirect to the cart.html page
+  window.location.href = "cart.html";
+});*/
+
+
+
+function addToCart(button) {
+  // Increment the cart count
+  var cartCountElement = document.getElementById("cartCount");
+  var currentCount = parseInt(cartCountElement.innerHTML);
+  cartCountElement.innerHTML = currentCount + 1;
+
+  // Get the product details
+  var productContainer = button.closest(".pro");
+  var productName = productContainer.querySelector(".des h5").textContent;
+  var productPrice = productContainer.querySelector(".des h4").textContent;
+  var productImage = productContainer.querySelector("img").getAttribute("src");
+
+  // Create an object representing the cart item
+  var cartItem = {
+    name: productName,
+    price: productPrice,
+    image: productImage
+  };
+
+  // Get the existing cart items from local storage or initialize an empty array
+  var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  // Add the new cart item to the array
+  cartItems.push(cartItem);
+
+  // Store the updated cart items in local storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+// Get the cart icon element
+var cartIcon = document.getElementById("cartIcon");
+
+// Attach a click event listener to the cart icon
+cartIcon.addEventListener("click", function() {
+  // Redirect to the cart.html page
+  window.location.href = "cart.html";
+});
+
+//------------------------------------------------end------------------------------------------------------------//
   // Get all the view buttons
 var viewButtons = document.querySelectorAll("#viewButton");
 
